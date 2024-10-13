@@ -31,8 +31,8 @@ def runModel():
 
     # Build the neural network model
     model = keras.Sequential([
-        keras.layers.Dense(256, activation='relu', input_shape=(X_train.shape[1],)),
-        keras.layers.Dense(128, activation='relu'),
+        keras.layers.Dense(512, activation='relu', input_shape=(X_train.shape[1],)),
+        keras.layers.Dense(256, activation='relu'),
         keras.layers.Dense(1)  # Output layer for regression
     ])
 
@@ -40,7 +40,7 @@ def runModel():
     model.compile(optimizer='adam', loss='mse', metrics=['mae'])
 
     # Train the model
-    history = model.fit(X_train, y_train, epochs=80, validation_split=0.2, verbose=1)
+    history = model.fit(X_train, y_train, epochs=100, validation_split=0.2, verbose=1)
 
     # Save the trained model
     model.save('agriculture_yield_prediction_model_V2.h5')

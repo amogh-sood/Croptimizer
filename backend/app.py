@@ -10,9 +10,9 @@ app = Flask(__name__, template_folder='../frontend')
 
 CORS(app)
 
-model = keras.models.load_model('agriculture_yield_prediction_model_V2.h5', custom_objects={'mse': MeanSquaredError()})
+model = keras.models.load_model('/Users/amoghsood/Desktop/UTA2024/backend/agriculture_yield_prediction_model_V2.h5', custom_objects={'mse': MeanSquaredError()})
 
-with open("./label_encoders.pkl", "rb") as f:  # "rb" means read binary
+with open("/Users/amoghsood/Desktop/UTA2024/backend/label_encoders.pkl", "rb") as f:  # "rb" means read binary
     label_encoders = pickle.load(f)
     
 @app.route('/')

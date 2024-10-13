@@ -3,102 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Crop Yield Prediction</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <form id="predictionForm">
-            <label for="Soil_Type">Choose a soil type:</label>
-            <select id="Soil_Type" name="Soil_Type">
-                <option value="" disabled selected>Pick the soil type</option>
-                <option value="Chalky">Chalky</option>
-                <option value="Silt">Silt</option>
-                <option value="Clay">Clay</option>
-                <option value="Sandy">Sandy</option>
-                <option value="Loam">Loam</option>
+<div class="container">
+    <nav>
+        <img src="thing.png" class="logo" alt="Logo">
+        <!--<ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#learn-more-section" class="btn">Get Started</a></li> 
+        </ul>-->
+    </nav>
 
-            </select>
-    
-            <br><br>
-    
+    <!-- Section 1: Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>CROPTIMIZER</h1>
+            <h3>HARVEST YOUR SUCCESS</h3>
+            <img src="down-arrow.png" class="logo" alt="Arrow Down">
+            <a href="test.html" class="btn">Start Test</a>
+        </div>
+    </section>
 
-            <label for="Crop">Choose a crop:</label>
-            <select id="Crop" name="Crop">
-                <option value="" disabled selected>Pick the crop</option>
-                <option value="Maize">Maize</option>
-                <option value="Rice">Rice</option>
-                <option value="Soybean">Soybean</option>
-                <option value="Wheat">Wheat</option>
-                <option value="Cotton">Cotton</option>
+    <!-- Section 2: Learn More Section -->
+    <section id="learn-more-section" class="learn-more">
+        <h1>HOW DOES THIS WORK?</h1>
+        <p class="centered-text">As farmers, you provide vital data 
+            such as soil conditions, weather patterns, and other relevant
+             factors, to generate a detailed prediction of the expected crop 
+             yield and then we leverage this input to give you a clear estimate of what
+              your harvest is likely to produce under current conditions.</p>
+         <!-- Start Test Button -->
 
-            </select>
-    
-            <br><br>
-    
+         <h1>OUR GOAL!</h1>
+         <p class="centered-text">Croptimizer is built using advanced 
+            neural networks that analyze real-world agricultural
+             data to help farmers make informed decisions. We used the 
+             <a href="https://www.kaggle.com/datasets/samuelotiattakorah/agriculture-crop-yield?resource=download" target="_blank">Agriculture Crop Yield Dataset</a>
+              from Kaggle as a foundation for our model. 
+              This dataset contains crucial factors such as soil conditions, crop types, weather data, and yield statistics across various regions, 
+              which enabled us to train our model on real agricultural patterns. 
+         
+         However, we believe that our predictions could become even more accurate with more diverse data. If you have access to more 
+         localized data, whether it’s related to different crop types, regional climate data, or specific farming practices, we would 
+         love to integrate it into our model. By continuously expanding our dataset, we can help you andfarmers across the globe make better 
+         predictions, optimize their farming strategies, and ultimately increase their crop yields.</p>
+         
 
-            <label for="Region">Choose a region:</label>
-            <select id="Region" name="Region">
-                <option value="" disabled selected>Pick the region</option>
-                <option value="North">North</option>
-                <option value="South">South</option>
-                <option value="East">East</option>
-                <option value="West">West</option>
-            </select>
-    
-            <br><br>
-            
-            <label for="Fertilizer_Used">Did you use fertilizer on you field:</label>
-            <select id="Fertilizer_Used" name="Fertilizer_Used">
-                <option value="" disabled selected>T/F</option>
-                <option value="True">Yes</option>
-                <option value="False">No</option>
-            </select>
-    
-            <br><br>
+    </section>
 
-            <label for="Irrigation_Used">Did you use irrigation on you field:</label>
-            <select id="Irrigation_Used" name="Irrigation_Used">
-                <option value="" disabled selected>T/F</option>
-                <option value="True">Yes</option>
-                <option value="False">No</option>
-            </select>
-    
-            <br><br>
+    <!-- Section 3: Mission Section -->
 
-            <label for="Weather_Condition">The Predominant weather conditions during the growing season:</label>
-            <select id="Weather_Condition" name="Weather_Condition">
-                <option value="" disabled selected>Weather</option>
-                <option value="Sunny">Sunny</option>
-                <option value="Rainy">Rainy</option>
-                <option value="Cloudy">Cloudy</option>
-            </select>
-    
-            <br><br>
-
-            <label for="Days_to_Harvest">The number of days taken for the crop to be harvest after planning:</label>
-            <input type="number" id="Days_to_Harvest" name="Days_to_Harvest" min="50" max="160" step="1" required>
-    
-            <br><br>
-
-            <label for="Rainfall_mm">The amount of rainfall received in millimeters during the crop growth period</label>
-            <input type="number" id="Rainfall_mm" name="Rainfall_mm" min="50" max="160" step="0.1" required>
-    
-            <br><br>
-            
-            <label for="Temperature_Celsius">The average temperature during the crop growth period, measured in degrees Celsius:</label>
-            <input type="number" id="Temperature_Celsius" name="Temperature_Celsius" min="15" max="45" step="0.1" required>
-    
-            <br><br>
-
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <div>
-        <h2 id="resultant"></h2>
-    </div>
-
-    <script src="index.js"></script>
-
+</div>
 </body>
 </html>

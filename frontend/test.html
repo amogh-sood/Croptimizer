@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tests.css">
+</head>
+<body>
+    <div>
+        <form id="predictionForm">
+            <label for="Soil_Type">Choose a soil type:</label>
+            <select id="Soil_Type" name="Soil_Type">
+                <option value="" disabled selected>Pick the soil type</option>
+                <option value="Chalky">Chalky</option>
+                <option value="Silt">Silt</option>
+                <option value="Clay">Clay</option>
+                <option value="Sandy">Sandy</option>
+                <option value="Loam">Loam</option>
+
+            </select>
+    
+            <br><br>
+    
+
+            <label for="Crop">Choose a crop:</label>
+            <select id="Crop" name="Crop">
+                <option value="" disabled selected>Pick the crop</option>
+                <option value="Maize">Maize</option>
+                <option value="Rice">Rice</option>
+                <option value="Soybean">Soybean</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Cotton">Cotton</option>
+
+            </select>
+    
+            <br><br>
+    
+
+            <label for="Region">Choose a region:</label>
+            <select id="Region" name="Region">
+                <option value="" disabled selected>Pick the region</option>
+                <option value="North">North</option>
+                <option value="South">South</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+            </select>
+    
+            <br><br>
+            
+            <label for="Fertilizer_Used">Did you use fertilizer on you field:</label>
+            <select id="Fertilizer_Used" name="Fertilizer_Used">
+                <option value="" disabled selected>T/F</option>
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+    
+            <br><br>
+
+            <label for="Irrigation_Used">Did you use irrigation on you field:</label>
+            <select id="Irrigation_Used" name="Irrigation_Used">
+                <option value="" disabled selected>T/F</option>
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+    
+            <br><br>
+
+            <label for="Weather_Condition">The Predominant weather conditions during the growing season:</label>
+            <select id="Weather_Condition" name="Weather_Condition">
+                <option value="" disabled selected>Weather</option>
+                <option value="Sunny">Sunny</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Cloudy">Cloudy</option>
+            </select>
+    
+            <br><br>
+
+            <label for="Days_to_Harvest">The number of days taken for the crop to be harvest after planning:</label>
+            <input type="number" id="Days_to_Harvest" name="Days_to_Harvest" min="50" max="160" step="1" required>
+    
+            <br><br>
+
+            <label for="Rainfall_mm">The amount of rainfall received in millimeters during the crop growth period</label>
+            <input type="number" id="Rainfall_mm" name="Rainfall_mm" min="50" max="160" step="0.1" required>
+    
+            <br><br>
+            
+            <label for="Temperature_Celsius">The average temperature during the crop growth period, measured in degrees Celsius:</label>
+            <input type="number" id="Temperature_Celsius" name="Temperature_Celsius" min="15" max="45" step="0.1" required>
+    
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <h2 id="resultant"></h2>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* Updated font-family */
+    box-sizing: border-box;
+}
+
+/* Background image for the entire body */
+body {
+    background: url('lallipop.jpg');
+    background-size: cover;
+    color: #ededed;
+    min-height: 100vh; /* Ensure body covers full height */
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Align items at the start */
+    padding: 60px 20px; /* Increased padding at the top and bottom */
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+/* Overlay for better contrast */
+body::before {
+    content: '';
+    position: fixed; /* Make sure the overlay stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Styling the form */
+form {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent background */
+    padding: 40px; /* Increased padding for the form */
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Blurs the background */
+    z-index: 1;
+}
+
+/* Styling form labels */
+form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fffac7;
+    font-family: 'Georgia', serif; /* Ensure font is used for labels */
+}
+
+/* Styling form inputs and selects */
+form select,
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #0a2e47;
+    border-radius: 5px;
+    background-color: #ededed;
+    color: #000000;
+    font-size: 1rem;
+    font-family: 'Georgia', serif; /* Apply font to form elements */
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    background-color: #1c1100;
+    color: rgb(76, 70, 43);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Georgia', serif; /* Font for the button */
+}
+
+/* Hover effect for the submit button */
+form input[type="submit"]:hover {
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+/* Styling the result section */
+#resultant {
+    text-align: center;
+    color: rgb(255, 247, 213);
+    background-color: #000000;
+    padding: 60px 20px; 
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Georgia', serif; /* Apply font to the result text */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+}

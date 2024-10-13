@@ -1,0 +1,176 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: GEORGIA, SERIF;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+/* Container setup */
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('lallipop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(1px) brightness(100%);
+    z-index: -1;
+}
+
+/* Navigation bar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    background-color: rgba(0, 165, 49, 0);
+    z-index: 1;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Navigation menu styling */
+ul {
+    list-style: none;
+    display: flex;
+    margin-left: 30px;
+}
+
+ul li {
+    margin-left: 10px;
+}
+
+/* Button styles for both 'Get Started' and 'Start Test' */
+ul li a, .btn {
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;  /* Set button to absolute positioning */
+    top: 74%;            /* Adjust the top value to control vertical placement */
+    left: 45.6%;
+    color: rgb(255, 234, 138);
+    text-decoration: none;
+}
+
+
+
+ul li a:hover, .btn:hover {
+    background-color: rgb(255, 252, 168);
+    color: #000000;
+    transform: scale(1.2); /* Increase size to 120% on hover */
+}
+
+/* Home section */
+.home {
+    height: 100vh; /* Fills the height of the viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    position: relative; /* Relative to parent for stacking */
+    z-index: 1; /* Above the background */
+}
+
+/* Content inside home section */
+.home-content {
+    max-width: 200px; /* Maximum width for text */
+    padding: 10px;
+    color: rgb(0, 0, 0); /* Ensure text is visible */
+    display: flex; /* Centering using flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+}
+
+.home-content h1 {
+    font-family: georgia, serif;
+    font-size: 10rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(255, 241, 171); /* Make text visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+.home-content h3 {
+    font-family: georgia, serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Learn more section */
+.learn-more {
+    padding: 50px 10%; /* Spacing */
+    background-color: #073f0064; /* Slightly different background color */
+    color: rgb(255, 234, 138);
+    text-align: left; /* Left-align the text */
+    min-height: 100vh; /* Full height */
+    justify-content: cent;
+}
+
+.learn-more h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.learn-more p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    text-align: center; /* Center the paragraph text */
+}
+
+
+/* Mission Section */
+.Missi {
+    padding: 50px 10%; /* Spacing */
+    background-color: #073f0064; /* Slightly different background color */
+    color: rgb(255, 234, 138);
+    text-align: left; /* Left-align the text */
+    min-height: 100vh; /* Full height */
+}
+
+.Missi h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.Missi p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center the paragraph text */
+}
